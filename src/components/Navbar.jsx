@@ -32,13 +32,25 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center shadow-sm group-hover:bg-primary-dark transition-colors">
-              <span className="text-white text-xl">♥</span>
-            </div>
-            <div className="leading-tight">
-              <div className="font-display font-bold text-warm-text text-base leading-none">Faithful Hands</div>
-              <div className="text-xs text-warm-muted font-medium">Home Care LLC</div>
+          <Link to="/" className="flex items-center gap-2 group">
+            <img
+              src="/logo.png"
+              alt="Faithful Hands Home Care LLC"
+              className="h-12 md:h-14 w-auto object-contain"
+              onError={(e) => {
+                e.currentTarget.style.display = 'none'
+                e.currentTarget.nextElementSibling.style.display = 'flex'
+              }}
+            />
+            {/* Fallback text logo shown if logo.png is not yet added */}
+            <div className="items-center gap-3 hidden">
+              <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center shadow-sm group-hover:bg-primary-dark transition-colors">
+                <span className="text-white text-xl">♥</span>
+              </div>
+              <div className="leading-tight">
+                <div className="font-display font-bold text-warm-text text-base leading-none">Faithful Hands</div>
+                <div className="text-xs text-warm-muted font-medium">Home Care LLC</div>
+              </div>
             </div>
           </Link>
 

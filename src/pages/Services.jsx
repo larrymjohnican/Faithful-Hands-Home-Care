@@ -57,8 +57,8 @@ const services = [
       'Seamless transition and handoff',
       'Regular updates so you stay informed',
     ],
-    color: 'bg-red-50 border-red-100',
-    iconColor: 'text-red-400',
+    color: 'bg-primary-light border-primary/10',
+    iconColor: 'text-primary-dark',
   },
   {
     icon: <Sparkles size={36} />,
@@ -73,8 +73,8 @@ const services = [
       'Grocery shopping and errands',
       'Organization and clutter reduction',
     ],
-    color: 'bg-green-50 border-green-100',
-    iconColor: 'text-green-600',
+    color: 'bg-accent-light border-accent/20',
+    iconColor: 'text-accent-dark',
   },
   {
     icon: <Scissors size={36} />,
@@ -89,8 +89,8 @@ const services = [
       'Oral hygiene support',
       'Nail care and skin care assistance',
     ],
-    color: 'bg-purple-50 border-purple-100',
-    iconColor: 'text-purple-500',
+    color: 'bg-primary-light border-primary/10',
+    iconColor: 'text-primary',
   },
 ]
 
