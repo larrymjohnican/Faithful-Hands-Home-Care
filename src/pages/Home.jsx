@@ -10,6 +10,7 @@ import {
   Clock,
   Star,
   FileText,
+  UserCheck,
 } from 'lucide-react'
 
 const services = [
@@ -95,6 +96,26 @@ export default function Home() {
                 (803) 369-6254
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Signals Bar */}
+      <section className="bg-white border-b border-gray-100 py-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-wrap justify-center gap-6 md:gap-12 items-center">
+            <span className="inline-flex items-center gap-2 text-warm-muted text-sm font-medium">
+              <ShieldCheck size={18} className="text-primary" /> Licensed &amp; Insured
+            </span>
+            <span className="inline-flex items-center gap-2 text-warm-muted text-sm font-medium">
+              <UserCheck size={18} className="text-primary" /> Background Checked Caregivers
+            </span>
+            <span className="inline-flex items-center gap-2 text-warm-muted text-sm font-medium">
+              <Heart size={18} className="text-primary" /> Faith-Driven Care
+            </span>
+            <span className="inline-flex items-center gap-2 text-warm-muted text-sm font-medium">
+              <MapPin size={18} className="text-primary" /> Locally Owned &amp; Operated
+            </span>
           </div>
         </div>
       </section>
