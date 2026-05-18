@@ -10,6 +10,12 @@
   body {
     @apply bg-warm-bg text-warm-text font-sans;
   }
+
+  :focus-visible {
+    outline: 3px solid #2B5490;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
 }
 
 @layer components {

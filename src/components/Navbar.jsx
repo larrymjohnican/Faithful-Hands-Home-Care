@@ -55,7 +55,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav role="navigation" aria-label="Main navigation" className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
@@ -90,6 +90,7 @@ export default function Navbar() {
             className="md:hidden p-2 text-warm-muted hover:text-primary"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
+            aria-expanded={menuOpen}
           >
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
