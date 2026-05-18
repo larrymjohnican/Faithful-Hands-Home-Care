@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import useReveal from '../hooks/useReveal'
 import {
   Heart,
   Users,
@@ -64,6 +65,11 @@ const whyUs = [
 ]
 
 export default function Home() {
+  const servicesRef = useReveal()
+  const howItWorksRef = useReveal()
+  const whyUsRef = useReveal()
+  const testimonialsRef = useReveal()
+
   return (
     <>
       {/* Hero */}
@@ -121,7 +127,7 @@ export default function Home() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 bg-white">
+      <section ref={servicesRef} className="py-20 bg-white reveal">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="section-heading">Our Services</h2>
@@ -153,7 +159,7 @@ export default function Home() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 bg-warm-bg">
+      <section ref={howItWorksRef} className="py-20 bg-warm-bg reveal">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-4">
             <h2 className="section-heading">How It Works</h2>
@@ -250,7 +256,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-white">
+      <section ref={whyUsRef} className="py-20 bg-white reveal">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="section-heading">Why Families Choose Us</h2>
@@ -273,7 +279,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-warm-bg">
+      <section ref={testimonialsRef} className="py-20 bg-warm-bg reveal">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="section-heading">What Families Are Saying</h2>
