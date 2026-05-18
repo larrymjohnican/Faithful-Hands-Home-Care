@@ -207,6 +207,51 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <section className="py-20 bg-warm-bg">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12">
+            <h2 className="section-heading">What Families Are Saying</h2>
+            <p className="section-subheading mx-auto text-center">
+              Real experiences from the families we serve.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                quote:
+                  'Faithful Hands has been such a blessing for our family. The caregiver who comes to see Mom is so patient and kind — Mom actually looks forward to her visits now.',
+                name: 'Sarah T.',
+                role: 'Daughter of client',
+              },
+              {
+                quote:
+                  'We were nervous about bringing in outside help for Dad, but the team made us feel so comfortable from day one. They truly treat him with dignity.',
+                name: 'James R.',
+                role: 'Son of client',
+              },
+              {
+                quote:
+                  'Respite care through Faithful Hands gave me the first real break I\'d had in two years. Knowing Dad was in good hands let me actually rest.',
+                name: 'Linda M.',
+                role: 'Family caregiver',
+              },
+            ].map((t) => (
+              <div key={t.name} className="card flex flex-col gap-4">
+                <span className="text-yellow-400 text-lg tracking-wide">★★★★★</span>
+                <blockquote className="text-warm-muted text-sm leading-relaxed italic flex-grow">
+                  "{t.quote}"
+                </blockquote>
+                <div>
+                  <p className="text-warm-text font-semibold text-sm">{t.name}</p>
+                  <p className="text-warm-muted text-xs">{t.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Banner */}
       <section className="py-16 bg-primary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
