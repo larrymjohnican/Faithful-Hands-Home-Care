@@ -1,5 +1,32 @@
 import { useState } from 'react'
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle, Calendar } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle, Calendar, ChevronDown } from 'lucide-react'
+
+const faqs = [
+  {
+    q: 'How much does home care cost?',
+    a: 'Every care plan is personalized, so pricing depends on services needed and hours. We offer a free consultation to discuss your situation and provide a clear quote with no surprises.',
+  },
+  {
+    q: 'Are your caregivers background checked?',
+    a: "Yes. All Faithful Hands caregivers undergo thorough background checks before joining our team. Your loved one's safety is our top priority.",
+  },
+  {
+    q: 'How quickly can care begin?',
+    a: 'In most cases we can begin within a few days of your consultation. For urgent situations, please call us directly.',
+  },
+  {
+    q: 'What areas do you serve?',
+    a: 'We serve Kershaw County (Camden, Elgin, Lugoff, and surrounding areas) and Richland County (Columbia, Blythewood, Eastover, and more).',
+  },
+  {
+    q: 'Can I adjust or cancel services?',
+    a: 'Absolutely. You can adjust your care schedule or services at any time with reasonable notice. We are flexible and committed to working with your family.',
+  },
+  {
+    q: "What if I'm not satisfied with my caregiver?",
+    a: "Your comfort matters deeply to us. If you're ever not fully satisfied, let us know and we will work quickly to find a solution, including a different caregiver if needed.",
+  },
+]
 
 // ─── CONFIGURATION ────────────────────────────────────────────────────────────
 // To receive form submissions by email, create a free account at formspree.io,
@@ -49,6 +76,7 @@ const contactInfo = [
 ]
 
 export default function Booking() {
+  const [openFaq, setOpenFaq] = useState(0)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -329,6 +357,39 @@ export default function Booking() {
               send us an email.
             </a>
           </p>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12">
+            <h2 className="section-heading">Frequently Asked Questions</h2>
+            <p className="section-subheading mx-auto text-center">
+              Have questions? We have answers.
+            </p>
+          </div>
+          <div className="max-w-3xl mx-auto divide-y divide-gray-100">
+            {faqs.map((faq, i) => (
+              <div key={i}>
+                <button
+                  onClick={() => setOpenFaq(openFaq === i ? -1 : i)}
+                  className="w-full flex justify-between items-center py-4 text-left font-semibold text-warm-text gap-4"
+                >
+                  {faq.q}
+                  <ChevronDown
+                    size={20}
+                    className={`shrink-0 text-warm-muted transition-transform duration-200 ${openFaq === i ? 'rotate-180' : ''}`}
+                  />
+                </button>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${openFaq === i ? 'max-h-96' : 'max-h-0'}`}
+                >
+                  <p className="pb-4 text-warm-muted text-sm leading-relaxed">{faq.a}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </>
