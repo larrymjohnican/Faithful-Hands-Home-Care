@@ -9,6 +9,7 @@ import {
   MapPin,
   Clock,
   Star,
+  FileText,
 } from 'lucide-react'
 
 const services = [
@@ -126,6 +127,49 @@ export default function Home() {
               See All Services
               <ArrowRight size={18} />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-20 bg-warm-bg">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-4">
+            <h2 className="section-heading">How It Works</h2>
+            <p className="section-subheading mx-auto text-center">
+              Getting started with Faithful Hands is simple.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+            {[
+              {
+                num: '1',
+                icon: <Phone size={28} className="text-primary mx-auto mb-3" />,
+                title: 'Free Consultation',
+                desc: "Call us or book online. We'll learn about your loved one's needs, schedule, and preferences — no pressure, completely free.",
+              },
+              {
+                num: '2',
+                icon: <FileText size={28} className="text-primary mx-auto mb-3" />,
+                title: 'Personalized Care Plan',
+                desc: "We create a tailored care plan that fits your family's unique situation, budget, and goals.",
+              },
+              {
+                num: '3',
+                icon: <Heart size={28} className="text-primary mx-auto mb-3" />,
+                title: 'Care Begins',
+                desc: 'Your dedicated caregiver starts visits. We stay in close contact with your family to ensure everything is going perfectly.',
+              },
+            ].map((step) => (
+              <div key={step.num} className="text-center">
+                <div className="w-16 h-16 rounded-full bg-primary text-white font-display font-bold text-2xl flex items-center justify-center mx-auto mb-4">
+                  {step.num}
+                </div>
+                {step.icon}
+                <h3 className="font-semibold text-warm-text text-lg mb-2">{step.title}</h3>
+                <p className="text-warm-muted text-sm leading-relaxed">{step.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
