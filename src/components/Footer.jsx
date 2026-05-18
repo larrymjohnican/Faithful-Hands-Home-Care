@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Phone, Mail, MapPin, Heart } from 'lucide-react'
+import { Phone, Mail, MapPin, Heart, Facebook, Instagram } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -31,6 +31,27 @@ export default function Footer() {
             <p className="text-gray-400 text-sm leading-relaxed">
               Providing compassionate, faith-driven care for seniors and adults in Kershaw County and Richland County, SC.
             </p>
+            <h3 className="font-semibold text-white mb-3 mt-6">Follow Us</h3>
+            <div className="flex gap-3">
+              <a
+                href="https://www.facebook.com/faithfulhandshomecare"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit our Facebook page"
+                className="w-9 h-9 bg-gray-700 hover:bg-primary rounded-full flex items-center justify-center transition-colors text-white"
+              >
+                <Facebook size={16} />
+              </a>
+              <a
+                href="https://www.instagram.com/faithfulhandshomecare"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit our Instagram page"
+                className="w-9 h-9 bg-gray-700 hover:bg-primary rounded-full flex items-center justify-center transition-colors text-white"
+              >
+                <Instagram size={16} />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
