@@ -8,6 +8,7 @@ import {
   ArrowRight,
   CheckCircle,
   Phone,
+  DollarSign,
 } from 'lucide-react'
 
 const services = [
@@ -154,6 +155,34 @@ export default function Services() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Pricing Transparency */}
+      <section className="py-14 bg-primary-light border-y border-primary/10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <div className="bg-white rounded-2xl shadow-sm border border-primary/20 p-8 md:p-12 text-center">
+            <DollarSign size={40} className="text-primary mx-auto mb-4" />
+            <h2 className="section-heading mb-4">Personalized, Transparent Pricing</h2>
+            <p className="text-warm-muted leading-relaxed mb-6 max-w-2xl mx-auto">
+              We believe in honest, upfront pricing — no hidden fees, no surprises. Every care
+              plan is customized to your loved one's needs and schedule. We invite you to contact
+              us for a free consultation where we'll discuss your specific situation and provide a
+              clear, personalized quote.
+            </p>
+            <div className="flex flex-wrap justify-center gap-6 mt-6 mb-8">
+              {['No hidden fees', 'Free initial consultation', 'Flexible payment options'].map((item) => (
+                <span key={item} className="inline-flex items-center gap-2 text-sm text-warm-muted font-medium">
+                  <CheckCircle size={16} className="text-primary" />
+                  {item}
+                </span>
+              ))}
+            </div>
+            <Link to="/booking" className="btn-primary">
+              Get Your Free Quote
+              <ArrowRight size={18} />
+            </Link>
+          </div>
         </div>
       </section>
 
