@@ -168,6 +168,36 @@ export default function About() {
         </div>
       </section>
 
+      {/* Service Area Map */}
+      <section className="py-16 bg-warm-bg">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <h2 className="section-heading text-center mb-3">Our Coverage Area</h2>
+          <p className="section-subheading text-center mx-auto mb-8">
+            Proudly serving Kershaw and Richland County, South Carolina.
+          </p>
+          <div className="rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+            <iframe
+              title="Faithful Hands Home Care service area map"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d208692!2d-80.6076!3d34.2499!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f8a4c6e68f9fa9%3A0x7b7e15daa4d18285!2sKershaw+County%2C+SC!5e0!3m2!1sen!2sus!4v1"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full"
+            />
+          </div>
+          <p className="text-center text-sm text-warm-muted mt-4">
+            Not in our area?{' '}
+            <a href="tel:8033696254" className="text-primary font-medium hover:underline">
+              Call us
+            </a>{' '}
+            — we may still be able to help.
+          </p>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-primary">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
